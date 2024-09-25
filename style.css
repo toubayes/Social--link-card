@@ -1,0 +1,125 @@
+/* start variable  */
+:root{
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+    --Font-size-paragraph: 14px;
+}
+/* end variable  */
+ /* Start Global Rules */
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+   }
+  body {
+   margin: 0;
+   padding: 0;;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  /* start font  */
+  @font-face {
+    font-family:"Inter-VariableFont_slnt\,wght" ;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  }
+  @font-face {
+    font-family:"Inter-Bold" ;
+    src: url(assets/fonts/static/Inter-Bold.ttf);
+  }
+  @font-face {
+    font-family: "Inter-Regular";
+    src: url(assets/fonts/static/Inter-Regular.ttf);
+  }
+  /* end font  */
+  .page{
+background-color: var(--Grey-900);
+  }
+  .page .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .out-card{
+    background-color: var(--Grey-800);
+    width: 500px;
+    margin: 30px;
+  }
+  .in-card{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-card img{
+    border-radius: 50%;
+    width: 80px;
+  }
+  .header-card .name{
+ color: var(--White);
+ font-weight: 700;
+ font-family:"Inter-VariableFont_slnt\,wght" ;
+  }
+
+  .header-card .place{
+   font-size: var(--Font-size-paragraph);
+   color: var(--Green);
+   font-weight: 500;
+   font-family:"Inter-Bold" ;
+  }
+  .header-card .job{
+color: var(--Grey-700);
+font-weight: 600;
+font-family: "Inter-Regular";
+  }
+  .body-card{
+    display: flex;
+    flex-direction: column;
+  }
+  .body-card button{
+    width: 100%;
+    padding: 10px;
+    margin:  10px 0;
+    background-color: var(--Grey-700);
+    border-radius: 5px;
+    border: none;
+    color: var(--White);
+    font-weight: 500;
+    font-family:"Inter-Bold" ;
+    transition: .3s;
+    cursor: pointer;
+  }
+  .body-card button.active,
+  .body-card button:hover{
+    background-color: var(--Green);
+    color: var(--Grey-900);
+  }
